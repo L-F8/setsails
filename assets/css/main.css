@@ -1,0 +1,304 @@
+/* =================== PERSON AND COUNT =================== */
+.person-item {
+    position: relative;
+}
+
+.person-image,
+.person-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-slide-in {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    padding: 20px;
+    width: 100%;
+    background: var(--cyan-color);
+    color: var(--white-color);
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.35s ease-out;
+}
+
+.bottom-slide-in h2 {
+    font-size: 18px;
+}
+
+.bottom-slide-in span {
+    margin: 11px 0 0;
+    font-size: inherit;
+}
+
+.person-item:hover .bottom-slide-in {
+    transform: translateY(0);
+}
+
+.person-social {
+    margin: 13px 0 0;
+}
+
+.person-social-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.person-social-wrapper i {
+    font-size: 16px;
+}
+
+.person-social-wrapper i:hover {
+    color: #3abdc1;
+}
+
+.count-section {
+    position: relative;
+    background: #3abdc1;
+    text-align: center;
+    color: var(--white-color);
+    padding: 72px 50px;
+}
+
+.count-section::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    width: 100%;
+    height: 8px;
+    background: inherit;
+    z-index: 1;
+}
+
+.count-item h3 {
+    font-size: 65px;
+    line-height: 1em;
+    font-weight: 600;
+    letter-spacing: -.05em;
+}
+
+.count-item span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =================== WINTER RESORTS =================== */
+.winter-resort-section {
+    text-align: center;
+    padding: 105px 0 170px;
+}
+
+.winter-text {
+    padding: 0 120px;
+}
+
+.winter-resort__choose-your {
+    font-family: Satisfy, cursive;
+    color: #3fd0d4;
+    line-height: 1.8em;
+    font-size: 33px;
+}
+
+.winter-resort__winter-resort {
+    font-weight: 600;
+    letter-spacing: -.05em;
+    font-size: 65px;
+    color: var(--black-color);
+    line-height: 1.092307692307692em;
+}
+
+.winter-text p {
+    font-size: 17px;
+    margin: 12px 0 0;
+    color: #505050;
+}
+
+.winter-resort__image-wrapper {
+    gap: 40px;
+    padding: 0 50px;
+    margin: 60px 0 0;
+}
+
+.winter-resort__image-group {
+    border-radius: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.winter-resort__image-group img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out,
+        -webkit-transform 0.5s ease-in-out;
+}
+
+.winter-resort__image-group:hover img {
+    transform: translateZ(0) scale(1.03);
+}
+
+.winter-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.winter-overlay a {
+    height: 100%;
+    display: inline-grid;
+    align-items: center;
+}
+
+.winter-overlay span {
+    font-family: Satisfy, cursive;
+    color: var(--white-color);
+    font-size: 48px;
+}
+
+
+/* =================== FOOTER =================== */
+.footer {
+    background: var(--black-color);
+}
+
+.footer-grid-layout {
+    padding: 80px 50px;
+    align-items: unset;
+    gap: 30px;
+}
+
+.footer-col {}
+
+.footer-logo {
+    line-height: 3rem;
+}
+
+.footer-logo img {
+    max-width: 100%;
+}
+
+.footer-col p {
+    font-size: 17px;
+    line-height: 1.64em;
+    font-weight: 400;
+    color: #a9a9a9;
+    margin: 0 0 17px 0;
+}
+
+.footer-link {
+    font-size: 14px;
+    line-height: 2rem;
+    color: var(--white-color);
+    transition: all 0.3s linear 0s;
+}
+
+.footer-link:hover {
+    color: var(--cyan-color);
+}
+
+.footer-link i {
+    padding: 0 10px 0 0;
+}
+
+.footer-heading {
+    color: var(--white-color);
+    margin: 0 0 23px;
+    font-size: 18px;
+    line-height: 1.333333333333333em;
+    font-weight: 600;
+}
+
+.recent-post-row {
+    margin: 0 0 20px;
+}
+
+.recent-post-title {
+    color: #a9a9a9;
+}
+
+.recent-post-time {
+    color: var(--white-color);
+}
+
+.recent-post-title,
+.recent-post-time {
+    line-height: 1.9;
+    transition: color 0.3s linear;
+}
+
+.recent-post-title:hover,
+.recent-post-time:hover {
+    color: var(--cyan-color);
+}
+
+.footer-col span {
+    color: #a9a9a9;
+}
+
+.subcribe-group {
+    margin: 30px 0 0;
+}
+
+.subcribe-group-input {
+    background: rgba(255, 255, 255, 0.25);
+    margin: 0 0 10px;
+    width: 100%;
+    height: 45px;
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.subcribe-group-input i {
+    margin-left: 16px;
+}
+
+.subcribe-group-input input {
+    height: 100%;
+    font-size: inherit;
+    background: rgba(255, 255, 255, 0);
+}
+
+.subcribe-group-input i,
+.subcribe-group-input input,
+.subcribe-group-input input::placeholder {
+    color: var(--white-color);
+}
+
+.subcribe-group button {
+    width: 100%;
+    padding: 14px 42px;
+    background: var(--cyan-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+
+.subcribe-group button:hover {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #a9a9a9;
+    padding: 40px 0 30px;
+}
+
+.footer-copyright p {
+    font-size: 13px;
+}
+
+.footer-copyright a {
+    color: var(--white-color);
+    transition: color 0.3s linear 0s;
+}
+
+.footer-copyright a:hover {
+    color: var(--cyan-color);
+}
