@@ -1,3 +1,232 @@
+/* =================== BANNER AND SLIDER =================== */
+.slider-pagination {
+    margin: 16px 0 50px;
+}
+
+.slider-pagination-wrapper {
+    padding: 0 0 60px;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    height: 12px !important;
+    width: 12px !important;
+    margin: 0 8px !important;
+    background: #3eced2 !important;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet.active,
+.swiper-pagination-clickable .swiper-pagination-bullet:hover {
+    background: #3fd0d4 !important;
+}
+
+.slider-pagination-item {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pagination-image {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pagination-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out,
+        -webkit-transform 0.5s ease-in-out;
+}
+
+.pagination-image:hover img {
+    transform: scale(1.03);
+}
+
+.pagination-schedule {
+    background: var(--cyan-color);
+    color: var(--white-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: default;
+}
+
+.pagination-schedule span,
+.pagination-schedule p {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 14px;
+}
+
+.pagination-schedule a {
+    color: var(--white-color);
+    position: relative;
+    display: inline;
+}
+
+.pagination-schedule a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--white-color);
+    transition: all 0.3s ease-out;
+}
+
+.pagination-schedule a:hover::after {
+    width: 100%;
+}
+
+.pagination-text {
+    padding: 20px;
+}
+
+.pagination-text a {
+    width: fit-content;
+    color: var(--black-color);
+    font-size: 22px;
+    margin: 0 0 10px;
+    font-weight: 600;
+    line-height: 1.272727272727273em;
+    letter-spacing: -.05em;
+    transition: color 0.3s ease;
+}
+
+.pagination-text a:hover {
+    color: var(--cyan-color);
+}
+
+.pagination-text span {
+    color: #505050;
+}
+
+.price-and-rating {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.price-and-rating i {
+    margin-right: 6px;
+}
+
+
+/* =================== WINTER SPORTS =================== */
+.winter-sports-section {
+    text-align: center;
+    padding: 50px 0 100px;
+}
+
+.winter-sports-section .winter-resort__winter-resort {
+    margin: 0 0 48px;
+}
+
+.winter-sports-video {
+    margin: 0 auto;
+    width: 80%;
+    height: 400px;
+    position: relative;
+    box-shadow: 5px 8px 13.92px 2.08px rgba(0, 0, 0, .05);
+}
+
+.winter-sports-video a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.winter-sports-video a span {
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.winter-sports-video a span img {
+    transition: transform 0.3s ease;
+}
+
+.winter-sports-video a:hover span img {
+    transform: scale(1.05);
+}
+
+.sports-video__wrapper,
+.sports-video__wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.winter-sports-section .winter-text p {
+    margin: 30px 0 0;
+    padding: 0 88px;
+    font-size: inherit;
+}
+
+.winter-sports-section .winter-text .btn-view-more {
+    margin: 40px 0 0;
+    display: inline-block;
+    color: var(--white-color);
+    background-color: var(--cyan-color);
+    padding: 18px 66px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.winter-sports-section .winter-text .btn-view-more:hover {
+    background-color: #23a9af;
+}
+
+
+/* =================== WINTER HOLIDAYS =================== */
+.winter-holidays-section,
+.winter-holiday__item {
+    text-align: center;
+}
+
+.winter-holidays-section {
+    padding: 0 0 150px;
+}
+
+.winter-holiday__wrapper {
+    margin: 50px 0 0;
+    padding: 0 70px;
+    gap: 20px;
+}
+
+.winter-holiday__item {
+    padding: 0 22px;
+}
+
+.winter-holiday__text h4 {
+    margin: 27px 0 0;
+    color: var(--black-color);
+    font-size: 18px;
+    line-height: 1.333333333333333em;
+    font-weight: 600;
+}
+
+.winter-holiday__text span {
+    display: block;
+    color: #505050;
+    font-size: 14px;
+    margin: 11px 0 0;
+}
+
+.winter-holiday__item img {
+    transition: transform 0.3s ease;
+}
+
+.winter-holiday__item img:hover {
+    transform: translateY(-5px);
+}
+
 /* =================== PERSON AND COUNT =================== */
 .person-item {
     position: relative;
@@ -45,11 +274,12 @@
     gap: 20px;
 }
 
-.person-social-wrapper i {
+.person-social-wrapper a {
     font-size: 16px;
+    color: var(--white-color);
 }
 
-.person-social-wrapper i:hover {
+.person-social-wrapper a:hover {
     color: #3abdc1;
 }
 
@@ -135,25 +365,23 @@
 }
 
 .winter-resort__image-group:hover img {
-    transform: translateZ(0) scale(1.03);
+    transform: translateZ(0) scale(1.05);
+}
+
+.winter-overlay {
+    font-family: Satisfy, cursive;
+    color: var(--white-color);
+    font-size: 48px;
+    display: inline-grid;
+    align-items: center;
 }
 
 .winter-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.35);
-}
-
-.winter-overlay a {
-    height: 100%;
-    display: inline-grid;
-    align-items: center;
-}
-
-.winter-overlay span {
-    font-family: Satisfy, cursive;
-    color: var(--white-color);
-    font-size: 48px;
+    cursor: pointer;
+    border-radius: inherit;
 }
 
 
