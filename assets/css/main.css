@@ -1,4 +1,124 @@
 /* =================== BANNER AND SLIDER =================== */
+.swiper-banner .swiper-wrapper .swiper-slide {
+    padding: 90px 0 !important;
+}
+
+.slide-1 .slide-bg {
+    background-image: url("../imgs/skiing-slider-img-1.jpg");
+}
+
+.slide-2 .slide-bg {
+    background-image: url("../imgs/skiing-slider-img-2.jpg");
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-out;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px !important;
+    color: var(--cyan-color) !important;
+    transition: color 0.3s ease-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--cyan-color) !important;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    color: var(--white-color) !important;
+}
+
+.slide-1 .slide-bg,
+.slide-2 .slide-bg {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+}
+
+.title,
+.subtitle,
+.desc {
+    display: block;
+    color: var(--white-color);
+    text-align: center;
+    user-select: none;
+}
+
+.subtitle {
+    font-family: Satisfy, cursive;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.title {
+    font-size: 118px;
+    line-height: 124px;
+}
+
+.desc {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0 108px;
+    margin: 30px 0 0;
+}
+
+.content {
+    padding: 0 100px;
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 6s ease;
+}
+
+/* Khi slide active → zoom lên */
+.swiper-slide-active .slide-bg {
+    transform: scale(1.15);
+}
+
+.content>* {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.swiper-slide-active .subtitle {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.swiper-slide-active .title {
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.swiper-slide-active .desc {
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .slider-pagination {
     margin: 16px 0 50px;
 }
@@ -76,7 +196,11 @@
     transition: all 0.3s ease-out;
 }
 
-.pagination-schedule a:hover::after {
+.pagination-schedule p {
+    cursor: pointer;
+}
+
+.pagination-schedule p:hover a::after {
     width: 100%;
 }
 
@@ -184,6 +308,93 @@
 }
 
 
+/* =================== PARALLAX SECTION =================== */
+.parallax-section {
+    background-image: url("../imgs/skiing-parallax-1.jpg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-attachment: fixed;
+    position: static;
+    text-align: center;
+    padding: 108px 0 107px;
+    margin: 0 -30px;
+}
+
+.parallax-grid {
+    margin: 50px 0 0;
+    padding: 0 0 80px !important;
+}
+
+.parallax-top {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.parallax-column-inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: var(--white-color);
+}
+
+.parallax-column-inner h1 {
+    font-size: 65px;
+    line-height: 1.092307692307692em;
+    font-weight: 600;
+    letter-spacing: -.05em;
+}
+
+.parallax-column-inner p {
+    font-size: 17px;
+    margin: 12px 0 0;
+}
+
+.parallax-item {
+    background: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.parallax-grid-layout {
+    gap: 20px;
+    align-items: unset;
+    text-align: left;
+}
+
+.parallax-info a {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black-color);
+    transition: color 0.3s ease;
+}
+
+.parallax-info a:hover {
+    color: var(--cyan-color);
+}
+
+.parallax-info span i {
+    color: var(--cyan-color);
+}
+
+.parallax-info p {
+    margin: 10px 0 0;
+    color: #505050;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.parallax-info .evaluated-by {
+    margin: 11px 0 0;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.swiper-pagination.parallax-pagination {}
+
+
 /* =================== WINTER HOLIDAYS =================== */
 .winter-holidays-section,
 .winter-holiday__item {
@@ -191,7 +402,7 @@
 }
 
 .winter-holidays-section {
-    padding: 0 0 150px;
+    padding: 110px 0 150px;
 }
 
 .winter-holiday__wrapper {
@@ -226,6 +437,7 @@
 .winter-holiday__item img:hover {
     transform: translateY(-5px);
 }
+
 
 /* =================== PERSON AND COUNT =================== */
 .person-item {
@@ -312,6 +524,7 @@
     font-size: 18px;
     font-weight: 600;
 }
+
 
 /* =================== WINTER RESORTS =================== */
 .winter-resort-section {
