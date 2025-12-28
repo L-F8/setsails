@@ -20,6 +20,7 @@ body {
 body,
 html {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 ul {
@@ -49,6 +50,11 @@ select {
 
 .container {
   margin: 0 30px;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
 }
 
 .flex-col-2 {

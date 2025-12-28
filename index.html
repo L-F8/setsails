@@ -49,7 +49,37 @@
   </head>
   <body>
     <header>
-      <div class="container"></div>
+      <div class="container">
+        <div class="header-wrapper d-flex">
+          <div class="header-logo">
+            <a href="#">
+              <img src="./assets/imgs/logo.png" alt="" />
+            </a>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li><a href="#" class="header-menu__link active">Home</a></li>
+              <li><a href="#" class="header-menu__link">Pages</a></li>
+              <li><a href="#" class="header-menu__link">Destinations</a></li>
+              <li><a href="#" class="header-menu__link">Tours</a></li>
+              <li><a href="#" class="header-menu__link">Blog</a></li>
+              <li><a href="#" class="header-menu__link">Shop</a></li>
+              <li><a href="#" class="header-menu__link">Elements</a></li>
+            </ul>
+          </div>
+          <div class="header-options">
+            <a href="#">
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+            <a href="#">
+              <i class="icon-search fa-solid fa-search"></i>
+            </a>
+            <a href="#" class="btn-open-menu">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <section>
@@ -803,6 +833,83 @@
         </div>
       </div>
     </footer>
+
+    <div class="hidden-menu-left">
+      <a href="#" class="btn-close">
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="18px"
+          height="18px"
+          viewBox="0 0 20 20"
+          enable-background="new 0 0 20 20"
+          xml:space="preserve"
+        >
+          <line fill="none" x1="5.4" y1="15.6" x2="5.4" y2="15.6"></line>
+          <line
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            x1="0.5"
+            y1="0.6"
+            x2="19.4"
+            y2="19.4"
+          ></line>
+          <line
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            x1="19.4"
+            y1="0.6"
+            x2="0.6"
+            y2="19.4"
+          ></line>
+        </svg>
+      </a>
+      <div style="margin: 10px 0"></div>
+      <div class="hidden-menu__logo first">
+        <img src="./assets/imgs/logo-sidearea.png" alt="" />
+      </div>
+      <div class="hidden-menu__logo second">
+        <img src="./assets/imgs/sidearea-img-2.png" alt="" />
+      </div>
+      <div class="hidden-menu__iframe">
+        <a href="https://setsail.qodeinteractive.com/contact-us/">
+          <img src="./assets/imgs/sidearea-img.jpg" alt="" />
+        </a>
+      </div>
+      <div style="color: #505050; font-size: 14px">
+        Lorem ipsum dolor sit amet, consectetuer adipis cing elit. Aenean
+        commodo ligula eget dolor. Aenean massa. Cum sociis theme natoque
+      </div>
+      <div class="hidden-search-group">
+        <h2>Find Your Destination</h2>
+        <div class="hidden-search-group__wrap">
+          <input type="text" placeholder="Search..." />
+          <a href="#">
+            <i class="fa-solid fa-search"></i>
+          </a>
+        </div>
+      </div>
+      <div class="follow-me-group">
+        <h2>Follow Me</h2>
+        <div class="follow-me__socials d-flex">
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/swiper.js"></script>
   </body>
