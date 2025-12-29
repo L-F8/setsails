@@ -52,6 +52,7 @@ select {
   margin: 0 30px;
 }
 
+/* ------------- Common Stylesheet for Flex Layout ----------- */
 .d-flex {
   display: flex;
   align-items: center;
@@ -77,6 +78,7 @@ select {
   width: calc(100% / 6);
 }
 
+/* ------------- Common Stylesheet for Grid Layout ----------- */
 .grid,
 .grid-col-2,
 .grid-col-2-auto,
@@ -142,20 +144,67 @@ select {
   grid-template-columns: auto 1fr;
 }
 
-/* 
-.transition-default {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
+/* ------------- Common Stylesheet for submenu ----------- */
+.submenu-list {
+  position: absolute;
+  background: var(--white-color);
+  top: calc(100% + 28px);
+  left: -32px;
+  z-index: 999;
+  padding: 28px 0 30px;
+  min-width: 250px;
+}
 
-    transition:
-        opacity 0.5s ease,
-        visibility 0.5s ease,
-        transform 0.5s ease;
+.submenu-list ul li {
+  padding: 5px 25px 6px 32px;
+  cursor: pointer;
+}
+
+.submenu-list ul li a {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.menu-level-3 {
+  position: absolute;
+  background: var(--white-color);
+  left: 100%;
+  top: -28px;
+  padding: 28px 0 30px;
+  min-width: 245px;
+  z-index: 999;
+}
+
+.menu-level-3.shop {
+  left: -245px;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* ------------- Common Stylesheet for showing submenu ----------- */
+.transition-default {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+
+  transition: opacity 0.5s ease,
+    visibility 0.5s ease,
+    max-height 0.15s ease-out;
 }
 
 .transition-hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0);
-} */
+  opacity: 1;
+  visibility: visible;
+  max-height: 100vh;
+}

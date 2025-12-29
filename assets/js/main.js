@@ -1,3 +1,4 @@
+// ============ Xu ly dong/mo hidden sidebar content ============
 const btnClose = document.querySelector('.btn-close')
 const openMenuBtn = document.querySelector('.btn-open-menu')
 const hiddenMenu = document.querySelector('.hidden-menu-left')
@@ -15,4 +16,41 @@ document.addEventListener('click', (e) => {
     if (!hiddenMenu.contains(e.target) && !openMenuBtn.contains(e.target)) {
         hiddenMenu.classList.remove('open')
     }
+})
+
+
+// ============ Xu ly su kien khi hover vao cac menuitem thi hien submenu ============
+const headerMenuLink = document.querySelectorAll('.header-menu ul li')
+
+headerMenuLink.forEach((headerLink) => {
+    const submenu = headerLink.querySelector('.transition-default')
+
+    if (!submenu) {
+        return
+    }
+
+    headerLink.addEventListener('mouseenter', () => {
+        submenu.classList.add('transition-hover')
+    })
+
+    headerLink.addEventListener('mouseleave', () => {
+        submenu.classList.remove('transition-hover')
+    })
+})
+
+
+const submenuLi = document.querySelectorAll('.submenu-list ul li')
+
+submenuLi.forEach((subLink) => {
+    const menuLevel3 = subLink.querySelector('.hidden')
+
+    if (!menuLevel3) return
+
+    subLink.addEventListener('mouseenter', () => {
+        menuLevel3.classList.add('show')
+    })
+
+    subLink.addEventListener('mouseleave', () => {
+        menuLevel3.classList.remove('show')
+    })
 })

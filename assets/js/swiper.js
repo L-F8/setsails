@@ -1,38 +1,32 @@
-const personSwiper = new Swiper('.person-section', {
-    slidesPerView: 4,
-    spaceBetween: 0,
+// ============ AUTO SHOWING BANNER ============
+const swiper = new Swiper(".swiper-banner", {
+    // slidesPerView: 1,
     loop: true,
-    speed: 600,
+    speed: 1200,
+    effect: "fade",
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false,
+        disableOnInteraction: false
     },
-
-    allowTouchMove: true,
-    // grabCursor: true,
-
-    breakpoints: {
-        0: {
-
-        },
-        576: {
-
-        },
-        768: {
-
-        },
-        992: {
-
-        },
-        1200: {
-            slidesPerView: 4,
-        },
-        1400: {
-            slidesPerView: 4,
-        },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
     },
-})
+    grabCursor: false,
+    allowTouchMove: false,
+});
 
+swiper.on("slideChangeTransitionStart", () => {
+    document
+        .querySelectorAll(".swiper-slide .content > *")
+        .forEach(el => {
+            el.style.animation = "none";
+            el.offsetHeight; // force reflow
+            el.style.animation = "";
+        });
+});
+
+// ============ AUTO SHOWING SLIDER BELOW BANNER ============
 const paginationSlider = new Swiper('.slider-pagination', {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -73,6 +67,7 @@ const paginationSlider = new Swiper('.slider-pagination', {
     },
 })
 
+// ============ AUTO SHOWING PARALLAX TOP REVIEWS ============
 const parallaxSwiper = new Swiper('.parallax-grid', {
     slidesPerView: 3,
     spaceBetween: 40,
@@ -113,29 +108,38 @@ const parallaxSwiper = new Swiper('.parallax-grid', {
     },
 })
 
-const swiper = new Swiper(".swiper-banner", {
-    // slidesPerView: 1,
+// ============ AUTO SHOWING PERSON CARD ============
+const personSwiper = new Swiper('.person-section', {
+    slidesPerView: 4,
+    spaceBetween: 0,
     loop: true,
-    speed: 1200,
-    effect: "fade",
+    speed: 600,
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
     },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    },
-    grabCursor: false,
-    allowTouchMove: false,
-});
 
-swiper.on("slideChangeTransitionStart", () => {
-    document
-        .querySelectorAll(".swiper-slide .content > *")
-        .forEach(el => {
-            el.style.animation = "none";
-            el.offsetHeight; // force reflow
-            el.style.animation = "";
-        });
-});
+    allowTouchMove: true,
+    // grabCursor: true,
+
+    breakpoints: {
+        0: {
+
+        },
+        576: {
+
+        },
+        768: {
+
+        },
+        992: {
+
+        },
+        1200: {
+            slidesPerView: 4,
+        },
+        1400: {
+            slidesPerView: 4,
+        },
+    },
+})
