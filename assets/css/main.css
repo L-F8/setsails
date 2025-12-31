@@ -297,7 +297,7 @@
     visibility: visible;
     right: 50%;
     left: 0;
-    transform: translateX(50%) scale(1);
+    transform: scale(1);
 }
 
 .tem-item__desc a {
