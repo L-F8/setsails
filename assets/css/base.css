@@ -280,17 +280,13 @@ select {
   background: rgba(255, 255, 255, .9);
 }
 
-.account-overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
 .account-form {
   background: #23a9af;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 450px;
 }
 
 .account-form__tab a {
@@ -302,6 +298,8 @@ select {
   letter-spacing: .1em;
   width: calc(100% / 2);
   padding: 10px 0;
+  background-color: #23a9af;
+  transition: background-color .3s ease;
 }
 
 .account-form__tab a.active,
@@ -310,12 +308,25 @@ select {
 }
 
 .account-form__iframe {
+  transition: all .3s ease;
   padding: 20px 40px;
 }
 
 .account-form__login,
 .account-form__register {
   color: var(--white-color);
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.account-form__login.on-tab,
+.account-form__register.on-tab {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
 
 .account-form__login p,

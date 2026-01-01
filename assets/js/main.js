@@ -27,8 +27,32 @@ accountLi[1].addEventListener('click', () => {
     accOverlay.classList.add('visible')
 })
 
-document.addEventListener('click', e => {
-    if (accOverlay.contains(e.target)) {
+
+// ======= Xu ly form trong overlay account =========
+const tabs = document.querySelectorAll('.account-form__tab a')
+const loginForm = document.querySelector('.account-form__login')
+const registerForm = document.querySelector('.account-form__register')
+const fb_and_gg = document.querySelector('.facebook-and-google')
+
+tabs[0].addEventListener('click', () => {
+    tabs[0].classList.add('active')
+    tabs[1].classList.remove('active')
+    loginForm.classList.add('on-tab')
+    registerForm.classList.remove('on-tab')
+    fb_and_gg.classList.add('active')
+})
+
+tabs[1].addEventListener('click', () => {
+    tabs[1].classList.add('active')
+    tabs[0].classList.remove('active')
+    registerForm.classList.add('on-tab')
+    loginForm.classList.remove('on-tab')
+    fb_and_gg.classList.remove('active')
+})
+
+const accForm = document.querySelector('.account-form')
+document.addEventListener('click', (e) => {
+    if (accOverlay.contains(e.target) && !accForm.contains(e.target)) {
         accOverlay.classList.remove('visible')
     }
 })
@@ -112,7 +136,9 @@ function clearHoverState() {
 
 
 /**
- * Xy ly phan overlay login/register
+ * 
  */
 
-// const 
+
+
+

@@ -632,3 +632,22 @@
     background-color: #23a9af;
     color: var(--white-color);
 }
+
+.register-policy {
+    display: inline;
+    color: #26878a;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.register-policy:hover {
+    color: var(--black-color);
+}
+
+.facebook-and-google {
+   display: none;
+}
+
+.facebook-and-google.active {
+    display: flex;
+}

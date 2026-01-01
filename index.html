@@ -1869,7 +1869,7 @@
           <a>Regiser</a>
         </div>
         <div class="account-form__iframe">
-          <div class="account-form__login">
+          <div class="account-form__login on-tab">
             <form action="">
               <h2>Sign In Here!</h2>
               <p>Log into your account in just a few simple steps.</p>
@@ -1896,7 +1896,9 @@
                 >Sign in with Facebook or Google+</span
               >
             </form>
-            <div class="d-flex" style="margin: 0 -40px -20px">
+            
+          </div>
+          <div class="facebook-and-google active d-flex" style="margin: 0 -40px -20px">
               <a
                 href="#"
                 style="
@@ -1908,7 +1910,6 @@
                   width: 50%;
                   text-align: center;
                   background-color: rgb(59, 89, 152);
-                  display: block;
                 "
                 >Facebook</a
               >
@@ -1923,13 +1924,39 @@
                   width: 50%;
                   text-align: center;
                   background-color: rgb(221, 75, 57);
-                  display: block;
                 "
                 >Google+</a
               >
             </div>
+          <div class="account-form__register">
+            <form action="">
+              <h2>Register Now!</h2>
+              <p>Join the SetSail community today & set up a free account.</p>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Username" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" required />
+              </div>
+              <div class="account-form__input-group grid">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Repeat Password" required />
+              </div>
+              <p style="margin: 10px 0; display: block"></p>
+                Your personal data will be used to support your experience
+                throughout this website, to manage access to your account, and
+                for other purposes described in our
+                <a class="register-policy" href="#">privacy policy.</a>
+              </p>
+              <button type="submit" class="account-submit-btn">Register</button>
+            </form>
           </div>
-          <div class="account-form__register"></div>
         </div>
       </div>
     </div>
