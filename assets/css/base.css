@@ -43,7 +43,8 @@ h6 {
 
 button,
 input,
-select {
+select,
+textarea {
   border: none;
   outline: none;
 }
