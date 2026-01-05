@@ -88,13 +88,114 @@
         line-height: 1.1;
       }
 
+      .des-slider-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .des-slider-menu a {
+        padding-left: 20px;
+      }
+
+      .des-slider-menu img {
+        max-width: 160px;
+      }
+
+      .des-slider-menu span {
+        background-color: var(--cyan-color);
+        color: var(--white-color);
+        padding: 30px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
       .des-slider-overlay {
         position: fixed;
         inset: 0;
-
         background-color: rgba(63, 208, 212, 0.85);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 999;
+      }
+
+      .des-slider-overlay.visible {
         visibility: visible;
         opacity: 1;
+      }
+
+      .des-menu-item,
+      .des-menu-subitem {
+        position: relative;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: -1.5px;
+        display: inline-block;
+      }
+
+      .des-menu-item {
+        margin: 18px 0;
+        line-height: 1.2em;
+        font-size: 30px;
+        opacity: 0;
+        transform: translateX(-80px);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+      }
+
+      .des-menu-subitem {
+        font-size: 22px;
+      }
+
+      .des-slider-overlay.visible .des-menu-item {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .des-menu-item::after,
+      .des-menu-subitem::after {
+        content: "";
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        width: 0;
+        transition: all 0.4s ease;
+        height: 2px;
+        background-color: var(--white-color);
+      }
+
+      .des-menu-item:hover::after,
+      .des-menu-subitem:hover::after {
+        width: 100%;
+      }
+
+      .des-slider-overlay.visible li:nth-child(1) .des-menu-item {
+        transition-delay: 0.1s;
+      }
+      .des-slider-overlay.visible li:nth-child(2) .des-menu-item {
+        transition-delay: 0.2s;
+      }
+      .des-slider-overlay.visible li:nth-child(3) .des-menu-item {
+        transition-delay: 0.3s;
+      }
+      .des-slider-overlay.visible li:nth-child(4) .des-menu-item {
+        transition-delay: 0.4s;
+      }
+      .des-slider-overlay.visible li:nth-child(5) .des-menu-item {
+        transition-delay: 0.5s;
+      }
+
+      .des-submenu {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
       }
     </style>
   </head>
@@ -176,9 +277,133 @@
       </section>
     </main>
 
-    <div class="des-slider-menu"></div>
+    <div class="des-slider-menu">
+      <a href="../../index.html"
+        ><img src="../../assets/imgs/logo.png" alt="" />
+      </a>
+      <span><i class="fa-solid fa-bars"></i></span>
+    </div>
 
-    <!-- <div class="des-slider-overlay"></div> -->
+    <div class="des-slider-overlay">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <a href="../../index.html" style="padding-left: 20px">
+          <img
+            src="../../assets/imgs/logo-white.png"
+            alt=""
+            style="max-width: 160px"
+          />
+        </a>
+        <span
+          class="close-overlay-btn-x"
+          style="cursor: pointer; padding: 30px; font-size: 20px; color: #fff"
+        >
+          <i class="fa-solid fa-x"></i>
+        </span>
+      </div>
+      <div style="width: 60%; margin: 0 auto; text-align: center; color: #fff">
+        <ul>
+          <li>
+            <a class="des-menu-item"> Homepages </a>
+            <div class="des-submenu">
+              <ul>
+                <li>
+                  <a href="../../index.html" class="des-menu-subitem"
+                    >Travel Agency</a
+                  >
+                </li>
+                <li>
+                  <a href="../vacation-showcase.html" class="des-menu-subitem"
+                    >Vacation Showcase</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../destinations-carousel.html"
+                    class="des-menu-subitem"
+                    >Destination Carousel</a
+                  >
+                </li>
+                <li>
+                  <a href="../summer-holidays.html" class="des-menu-subitem"
+                    >Summer Holidays</a
+                  >
+                </li>
+                <li>
+                  <a href="../city-tours.html" class="des-menu-subitem"
+                    >City Tours</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="des-menu-item"> Pages </a>
+            <div class="des-submenu">
+              <ul>
+                <li>
+                  <a href="../page/about-us.html" class="des-menu-subitem"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="../page/contact-us.html" class="des-menu-subitem"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="../page/faq-page.html" class="des-menu-subitem"
+                    >FAQ Page</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="des-menu-item"> Tours </a>
+            <div class="des-submenu">
+              <ul>
+                <li>
+                  <a href="../elements/tour-list.html" class="des-menu-subitem"
+                    >Tour List</a
+                  >
+                </li>
+                <li>
+                  <a href="../tours/tour-item.html" class="des-menu-subitem"
+                    >Tour Item</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="des-menu-item"> Destinations </a>
+            <div class="des-submenu">
+              <ul>
+                <li>
+                  <a href="./destination-list.html" class="des-menu-subitem"
+                    >Destination List</a
+                  >
+                </li>
+                <li>
+                  <a href="./destination-item.html" class="des-menu-subitem"
+                    >Destination Item</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="../landing.html" class="des-menu-item"> Landing </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <script>
       // =============== Destination Slider ===============
@@ -230,6 +455,54 @@
         },
         { passive: false }
       );
+
+      const barBtn = document.querySelector(".des-slider-menu span");
+      const closeOvlBtn = document.querySelector(".close-overlay-btn-x");
+
+      barBtn.addEventListener("click", () => {
+        document.querySelector(".des-slider-overlay").classList.add("visible");
+      });
+
+      closeOvlBtn.addEventListener("click", () => {
+        document
+          .querySelector(".des-slider-overlay")
+          .classList.remove("visible");
+      });
+
+      const menuItems = document.querySelectorAll(".des-menu-item");
+
+      menuItems.forEach((item) => {
+        const subMenu = item.nextElementSibling;
+        if (!subMenu) return;
+
+        item.addEventListener("click", () => {
+          menuItems.forEach((otherItem) => {
+            const otherSubmenu = otherItem.nextElementSibling;
+            if (otherSubmenu && otherSubmenu !== subMenu) {
+              otherSubmenu.style.height = otherSubmenu.scrollHeight + "px";
+              otherSubmenu.offsetHeight;
+              otherSubmenu.style.height = "0px";
+              otherSubmenu.classList.remove("open");
+            }
+          });
+
+          if (subMenu.classList.contains("open")) {
+            subMenu.style.height = subMenu.scrollHeight + "px";
+            subMenu.offsetHeight;
+            subMenu.style.height = "0px";
+            subMenu.classList.remove("open");
+          } else {
+            subMenu.style.height = subMenu.scrollHeight + "px";
+            subMenu.classList.add("open");
+          }
+        });
+
+        subMenu.addEventListener("transitionend", () => {
+          if (subMenu.classList.contains("open")) {
+            subMenu.style.height = "auto";
+          }
+        });
+      });
     </script>
   </body>
 </html>
