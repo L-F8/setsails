@@ -392,3 +392,15 @@ textarea {
   font-weight: 600;
   letter-spacing: -.05em;
 }
+
+.common-card {
+  position: relative;
+  background-color: var(--white-color);
+  margin: 0 0 -50px;
+  padding: 50px;
+  width: 90%;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 3px 20px 5px rgba(0, 0, 0, .03);
+}
