@@ -155,7 +155,10 @@ const oneCart = new Swiper('.one-card', {
     spaceBetween: 0,
     loop: true,
     // speed: 600,
-    autoplay: false,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
 
     allowTouchMove: true,
     // grabCursor: true,
